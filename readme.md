@@ -1,9 +1,9 @@
 # Laravel GHL Wrapper
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/RankFoundry/Laravel-GHL-Wrapper.svg?style=flat-square)](https://packagist.org/packages/RankFoundry/Laravel-GHL-Wrapper)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/RankFoundry/Laravel-GHL-Wrapper/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/RankFoundry/Laravel-GHL-Wrapper/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/RankFoundry/Laravel-GHL-Wrapper/badges/build.png?b=master)](https://scrutinizer-ci.com/g/RankFoundry/Laravel-GHL-Wrapper/build-status/master)
-[![Total Downloads](https://img.shields.io/packagist/dt/RankFoundry/Laravel-GHL-Wrapper.svg?style=flat-square)](https://packagist.org/packages/RankFoundry/Laravel-GHL-Wrapper)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/rankfoundry/laravel-ghl-wrapper.svg?style=flat-square)](https://packagist.org/packages/rankfoundry/laravel-ghl-wrapper)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rankfoundry/laravel-ghl-wrapper/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rankfoundry/laravel-ghl-wrapper/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/rankfoundry/laravel-ghl-wrapper/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rankfoundry/laravel-ghl-wrapper/build-status/master)
+[![Total Downloads](https://img.shields.io/packagist/dt/rankfoundry/laravel-ghl-wrapper.svg?style=flat-square)](https://packagist.org/packages/rankfoundry/laravel-ghl-wrapper)
 
 
 **A Laravel wrapper for High Level (GHL).**
