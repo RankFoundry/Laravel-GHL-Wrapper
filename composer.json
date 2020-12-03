@@ -1,6 +1,7 @@
 {
     "name": "rankfoundry/laravel-ghl-wrapper",
     "type": "library",
+    "license": "MIT",
     "description": "Laravel wrapper for High Level (GHL)",
     "keywords": ["ghl", "high level", "go high level"],
     "homepage": "https://rankfoundry.com",
