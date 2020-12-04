@@ -19,10 +19,12 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Rankfoundry\\LaravelGhlWrapper\\Providers\\GhlLocationServiceProvider"
+                "Rankfoundry\\LaravelGhlWrapper\\Providers\\GhlLocationServiceProvider",
+                "Rankfoundry\\LaravelGhlWrapper\\Providers\\GhlPipelineServiceProvider"
             ],
             "aliases": {
-                "GhlLocation": "Rankfoundry\\LaravelGhlWrapper\\Facades\\GhlLocationFacade"
+                "GhlLocation": "Rankfoundry\\LaravelGhlWrapper\\Facades\\GhlLocationFacade",
+                "GhlLocation": "Rankfoundry\\LaravelGhlWrapper\\Facades\\GhlPipelineFacade"
             }
         }
     },

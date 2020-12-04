@@ -24,7 +24,7 @@ class BaseClass
      * @param string $url
      * @param array  $params
      *
-     * @return mix
+     * @return obj
      */
     protected function call($url, $apikey, $params)
     {
@@ -38,7 +38,7 @@ class BaseClass
             'form_params' => $params,
             'query'       => $params,
         ]);
-
-        return $response->getBody();
+                
+        return json_decode($response->getBody()->getContents());
     } 
 }
