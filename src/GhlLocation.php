@@ -2,7 +2,7 @@
 
 namespace Rankfoundry\LaravelGhlWrapper;
 
-class GhlLocation extends Rankfoundry\LaravelGhlWrapper\BaseClass
+class GhlLocation extends BaseClass
 {
     /**
      * Retrieve a list of all agency locations.
