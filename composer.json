@@ -22,7 +22,7 @@
                 "Rankfoundry\\LaravelGhlWrapper\\Providers\\GhlLocationServiceProvider"
             ],
             "aliases": {
-                "GhlLocation": "Rankfoundry\\LaravelGhlWrapper\\Facades\\GhlLocationFacade::class"
+                "GhlLocation": "Rankfoundry\\LaravelGhlWrapper\\Facades\\GhlLocationFacade"
             }
         }
     },

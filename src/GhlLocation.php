@@ -11,7 +11,7 @@ class GhlLocation extends BaseClass
      *
      * @return mixed
      */
-    public function locations($apikey, array $params)
+    public static function locations($apikey, array $params)
     {
         return $this->call('locations', $apikey, $params);
     }
@@ -24,7 +24,7 @@ class GhlLocation extends BaseClass
      *
      * @return mixed
      */
-    public function single($id, $apikey, array $params)
+    public static function single($id, $apikey, array $params)
     {
         return $this->call('locations/'.$id, $apikey, $params);
     }
