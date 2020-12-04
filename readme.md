@@ -22,7 +22,7 @@ List of methods:
 ### Location
 
 ``` php
-use GhlLocation;
+use Rankfoundry\LaravelGhlWrapper\GhlLocation;
 
 $locations     = GhlLocation::locations($apikey);       // list of all agency locations
 $location      = GhlLocation::single($id,$apikey);     // single location
