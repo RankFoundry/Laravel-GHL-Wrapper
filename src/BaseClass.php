@@ -8,6 +8,7 @@ use GuzzleHttp\Middleware;
 use GuzzleHttp\MessageFormatter;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
+use Illuminate\Support\Facades\Log;
 
 class BaseClass
 {
@@ -57,4 +58,42 @@ class BaseClass
                 
         return json_decode($response->getBody()->getContents());
     } 
+    
+    /**
+     * Calls GHL api.
+     *
+     * @param string $url
+     * @param array  $params
+     *
+     * @return obj
+     */
+    protected function call2($url, $apikey, $params)
+    {
+        $logger = new Logger('Logger');
+        $logger->pushHandler(new StreamHandler(storage_path('logs/ghl.log')));
+        
+        $stack = HandlerStack::create();
+        $stack->push(
+            Middleware::log(
+                $logger,
+                new MessageFormatter(">>>>>>>>\n{request}\n<<<<<<<<\n{response}\n--------\n{error}\n++++++++++\n{req_headers}\n**********\n{res_headers}")
+            )
+        );
+        
+        $client = new Client([
+            'base_uri' => $this->baseUrl,
+            'handler' => $stack,
+        ]);
+        $response = $client->request('GET', $url, [
+            'headers' => [
+                'Authorization'  => 'Bearer ' . $apikey,
+            ],
+            'query'       => $params,
+        ]);
+        
+        Log::debug('body: '.json_decode($response->getBody()));
+        Log::debug('content: '.json_decode($response->getBody()->getContents()));
+        
+        return json_decode($response->getBody());
+    }
 }
