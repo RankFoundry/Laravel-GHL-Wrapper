@@ -52,7 +52,6 @@ class BaseClass
             'headers' => [
                 'Authorization'  => 'Bearer ' . $apikey,
             ],
-            'form_params' => $params,
             'query'       => $params,
         ]);
                 
