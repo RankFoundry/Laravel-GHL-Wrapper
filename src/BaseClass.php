@@ -91,8 +91,8 @@ class BaseClass
             'query'       => $params,
         ]);
         
-        Log::debug('body: '.json_decode($response->getBody()));
-        Log::debug('content: '.json_decode($response->getBody()->getContents()));
+        Log::debug('body: '.json_encode($response->getBody()));
+        Log::debug('content: '.json_encode($response->getBody()->getContents()));
         
         return json_decode($response->getBody());
     }
