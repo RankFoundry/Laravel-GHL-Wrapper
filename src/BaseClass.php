@@ -34,7 +34,7 @@ class BaseClass
     protected function call($url, $apikey, $params)
     {
         $logger = new Logger('Logger');
-        $logger->pushHandler(new StreamHandler(storage_path('logs/ghl.log'), Logger::WARNING));
+        $logger->pushHandler(new StreamHandler(storage_path('logs/ghl.log')));
         
         $stack = HandlerStack::create();
         $stack->push(
