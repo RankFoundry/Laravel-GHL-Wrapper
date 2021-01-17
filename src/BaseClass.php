@@ -7,7 +7,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;
 use GuzzleHttp\MessageFormatter;
 use Monolog\Logger;
-use MonologHandlerStreamHandler;
+use Monolog\Handler\StreamHandler;
 
 class BaseClass
 {
