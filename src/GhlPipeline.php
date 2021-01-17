@@ -7,7 +7,7 @@ class GhlPipeline extends BaseClass
     /**
      * Retrieve a list of all pipelines for location.
      *
-     * @param array $params
+     * @apikey string $apikey
      *
      * @return mixed
      */
@@ -16,4 +16,17 @@ class GhlPipeline extends BaseClass
         return $this->call('pipelines', $apikey, null);
     }
 
+    /**
+     * Retrieve a list of opportunities.
+     *
+     * @apikey string $apikey
+     * @pipeline string $pipeline
+     * @param array $params
+     *
+     * @return mixed
+     */
+    public function opportunities($apikey, $pipeline, $params)
+    {
+        return $this->call('pipelines/'.$pipeline.'/opportunities', $apikey, $params);
+    }
 }
