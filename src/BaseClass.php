@@ -40,7 +40,7 @@ class BaseClass
         $stack->push(
             Middleware::log(
                 $logger,
-                new MessageFormatter('{req_body} - {res_body}')
+                new MessageFormatter(">>>>>>>>\n{request}\n<<<<<<<<\n{response}\n--------\n{error}")
             )
         );
         
