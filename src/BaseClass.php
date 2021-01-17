@@ -7,6 +7,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;
 use GuzzleHttp\MessageFormatter;
 use Monolog\Logger;
+use MonologHandlerStreamHandler;
 
 class BaseClass
 {
@@ -32,10 +33,12 @@ class BaseClass
      */
     protected function call($url, $apikey, $params)
     {
+        $logger = new Logger('Logger');
+        $logger->pushHandler(new StreamHandler(storage_path('logs/ghl')));
         $stack = HandlerStack::create();
         $stack->push(
             Middleware::log(
-                new Logger('Logger'),
+                $logger,
                 new MessageFormatter('{req_body} - {res_body}')
             )
         );
