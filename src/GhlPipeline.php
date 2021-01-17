@@ -27,6 +27,6 @@ class GhlPipeline extends BaseClass
      */
     public function opportunities($apikey, $pipeline, $params)
     {
-        return $this->call('pipelines/$pipeline/opportunities', $apikey, $params);
+        return $this->call('pipelines/'.$pipeline.'/opportunities', $apikey, $params);
     }
 }
