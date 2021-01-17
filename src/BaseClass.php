@@ -3,6 +3,10 @@
 namespace Rankfoundry\LaravelGhlWrapper;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Middleware;
+use GuzzleHttp\MessageFormatter;
+use Monolog\Logger;
 
 class BaseClass
 {
@@ -28,8 +32,17 @@ class BaseClass
      */
     protected function call($url, $apikey, $params)
     {
+        $stack = HandlerStack::create();
+        $stack->push(
+            Middleware::log(
+                new Logger('Logger'),
+                new MessageFormatter('{req_body} - {res_body}')
+            )
+        );
+        
         $client = new Client([
             'base_uri' => $this->baseUrl,
+            'handler' => $stack,
         ]);
         $response = $client->request('GET', $url, [
             'headers' => [
