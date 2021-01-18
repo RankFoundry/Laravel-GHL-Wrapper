@@ -13,7 +13,7 @@ class GhlPipeline extends BaseClass
      */
     public function pipelines($apikey)
     {
-        return $this->call('pipelines', $apikey, null);
+        return $this->call2('pipelines', $apikey, null);
     }
 
     /**
