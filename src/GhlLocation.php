@@ -13,7 +13,7 @@ class GhlLocation extends BaseClass
      */
     public function locations($apikey)
     {
-        return $this->call('locations', $apikey, null);
+        return $this->call2('locations', $apikey, null);
     }
     
     /**
@@ -26,6 +26,6 @@ class GhlLocation extends BaseClass
      */
     public function single($id, $apikey)
     {
-        return $this->call('locations/'.$id, $apikey, null);
+        return $this->call2('locations/'.$id, $apikey, null);
     }
 }
